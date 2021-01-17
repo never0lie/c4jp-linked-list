@@ -3,6 +3,7 @@
 
 #include <stdbool.h>
 #include <stddef.h>
+#include <stdio.h>
 
 /**
  * Fetch the container of the specified @c TYPE containing an @c ll_node with
@@ -27,8 +28,6 @@
 struct ll_node {
     struct ll_node *prev;    /**< The previous node in this linked list. */
     struct ll_node *next;    /**< The next node in this linked list. */
-    int value;
-    bool isHead;
 };
 
 /**
@@ -212,5 +211,6 @@ struct ll_node *ll_max(struct ll_node *list, ll_comparator_t comparator);
  *         that satisfy the predicate, return NULL.
  */
 struct ll_node *ll_filter(struct ll_node *list, ll_predicate_t predicate);
+
 
 #endif // C4JP_LINKED_LIST_H_INCLUDED
