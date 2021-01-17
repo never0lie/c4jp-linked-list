@@ -27,6 +27,8 @@
 struct ll_node {
     struct ll_node *prev;    /**< The previous node in this linked list. */
     struct ll_node *next;    /**< The next node in this linked list. */
+    int value;
+    bool isHead;
 };
 
 /**
